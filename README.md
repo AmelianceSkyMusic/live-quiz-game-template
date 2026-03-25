@@ -44,6 +44,7 @@ npm run start:client   # client only (http://localhost:5173)
 Your server must handle all WebSocket commands described in the assignment specification. The client expects the following message protocol (all messages are JSON strings with `{ type, data, id: 0 }` format):
 
 **Client → Server commands:**
+
 - `reg` — register or login a player
 - `create_game` — host creates a game with questions
 - `join_game` — player joins a game by room code
@@ -51,6 +52,7 @@ Your server must handle all WebSocket commands described in the assignment speci
 - `answer` — player submits an answer
 
 **Server → Client responses:**
+
 - `reg` — registration result
 - `game_created` — game created with gameId and room code
 - `game_joined` — join confirmation
