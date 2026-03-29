@@ -1,6 +1,6 @@
-import { WebSocketServer } from 'ws';
+import { ws } from './ws.js';
 
-const PORT = process.env.PORT ? parseInt(process.env.PORT) : 3000;
+const PORT = process.env.PORT ? parseInt(process.env.PORT) : 2345;
 
-// WebSocket server
-const wss = new WebSocketServer({ port: PORT });
+ws.start({ port: PORT });
+console.log('Start websocket server on the', PORT, 'port!');
